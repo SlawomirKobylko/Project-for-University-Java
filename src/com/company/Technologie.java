@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Technologie {
-    //String [] tech = new String[6];
     Random techran = new Random();
     Integer dni_robocze;
     //Integer l = techran.nextInt(6)*1;
