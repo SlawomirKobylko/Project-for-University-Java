@@ -8,7 +8,10 @@ public class Main {
         Random ran = new Random();
         int x = ran.nextInt(3)*1;
 
-        System.out.println("Zaczynamy grę!");
+        Technologie t = new Technologie();
+
+
+        System.out.println("WItaj! Zaczynamy grę!");
         if (x==0)
             System.out.println("Wylosowałeś prosty projekt.");
         else if (x==1)
