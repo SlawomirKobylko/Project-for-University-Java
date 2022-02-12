@@ -4,7 +4,7 @@ public class Technologie {
 
     Integer dni_robocze;
 
-    Technologie(Integer l, Integer ilosc){
+    Technologie(Integer l){
             String s;
             int i;
 
@@ -18,6 +18,8 @@ public class Technologie {
             default:
                 throw new IllegalStateException("Unexpected value: " + l);
         }
+
+        System.out.println("Technologia " + s);
 
 
     }

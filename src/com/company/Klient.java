@@ -5,14 +5,15 @@ import java.util.Random;
 
 public class Klient extends Projekty{
     Integer ilosc_projektow;
+    Projekty projekt;
     public Boolean czy_dziala = true;
     public Boolean kontrakt = true;
     public Random szansa = new Random();
     public Integer kl = szansa.nextInt(3);
-    public Klient(Integer poziom_projektu, String nazwa_projektu,
-                   Integer termin_oddania, Integer kara, Integer cena, Integer termin_platnosci)
+    public Klient(Projekty projekt)
     {
-        super(poziom_projektu, nazwa_projektu, termin_oddania, kara, cena, termin_platnosci);
+        super(projekt.poziom_projektu, projekt.nazwa_projektu ,
+                projekt.termin_oddania, projekt.kara, projekt.cena, projekt.termin_platnosci);
         int s= szansa.nextInt(100);
         if(kl==0) { //wyluzowany
             if (s < 30) { //szansa na opoznienie platnosci
@@ -71,5 +72,17 @@ public class Klient extends Projekty{
                 System.out.println("Przecież Cię nie oszukam, zapłacę Ci kasę.");
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Klient{" +
+                "ilosc_projektow=" + ilosc_projektow +
+                ", projekt=" + projekt +
+                ", czy_dziala=" + czy_dziala +
+                ", kontrakt=" + kontrakt +
+                ", szansa=" + szansa +
+                ", kl=" + kl +
+                '}';
     }
 }
